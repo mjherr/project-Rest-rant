@@ -3,12 +3,15 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 
-app.use('/places', require('./controllers/places'))
-
+//Homepage
 app.get('/', (req, res) => {
     res.send('Hello world')
 })
 
+//Places route
+app.use('/places', require('./controllers/places'))
+
+//404 Page
 app.get('*', (req, res) => {
     res.status(404).send('<h1>404 Page</h1>')
 })
