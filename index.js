@@ -4,8 +4,11 @@ const express = require('express')
 const app = express()
 
 //Homepage
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine())
+
 app.get('/', (req, res) => {
-    res.send('Hello world')
+    res.render('Home')
 })
 
 //Places route
