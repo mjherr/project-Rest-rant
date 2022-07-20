@@ -16,7 +16,7 @@ app.use('/places', require('./controllers/places'))
 
 //404 Page
 app.get('*', (req, res) => {
-    res.status(404).send('<h1>404 Page</h1>')
+    res.status(404).render('error404')
 })
 
 app.listen(process.env.PORT)
