@@ -1,9 +1,19 @@
 h1 {
     text-align: center;
     color: cornflowerblue;
+    font-size: 5 em;
 }
 
 .btn-primary {
-    color: black;
+    color: white;
     background: cornflowerblue;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+li {
+    display: inline;
 }
